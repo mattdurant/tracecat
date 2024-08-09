@@ -69,6 +69,7 @@ def _create_async_db_engine() -> AsyncEngine:
         "max_overflow": 10,
         "future": True,
         "pool_recycle": 3600,
+        "isolation_level": "SERIALIZABLE",
     }
 
     uri = _get_db_uri(driver="asyncpg")
